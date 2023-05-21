@@ -86,7 +86,7 @@ server <- function(input, output) {
   output$numeric_output <- renderPrint({
     if (input$number <= 11 & input$number > 0) {
       "You need to choose knn as the model."
-    } else if (input$number > 11 & input$number <=15){
+    } else if (input$number > 11){
       "You should choose random forest as the model."
     } else{
       "This is not a valid input."

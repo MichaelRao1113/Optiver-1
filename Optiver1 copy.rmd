@@ -718,7 +718,7 @@ aRMSE = ggplot() +
   theme_minimal() +
   ggtitle("Average RMSE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 RMSE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -740,7 +740,7 @@ aQLIKE = ggplot() +
   theme_minimal() +
   ggtitle("Average QLIKE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 QLIKE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -762,7 +762,7 @@ aMAE = ggplot() +
   theme_minimal() +
   ggtitle("Average MAE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 MAE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -793,7 +793,7 @@ mRMSE = ggplot() +
   theme_minimal() +
   ggtitle("Median RMSE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 RMSE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -815,7 +815,7 @@ mQLIKE = ggplot() +
   theme_minimal() +
   ggtitle("Median QLIKE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 QLIKE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -837,7 +837,7 @@ mMAE = ggplot() +
   theme_minimal() +
   ggtitle("Median MAE Accuracy comparison between predictive models, buckets/bin = 5, repeats = 30") + 
   labs(color="Model") + ylab("Log 2 MAE") +
-  scale_color_manual(labels = c("ARM", "SVM", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
+  scale_color_manual(labels = c("ARM", "SVR", "REG", "RAN"), values = c("red", "darkgreen", "blue", "purple")) + 
   theme(axis.text.x = element_text(angle = 45, hjust=1), plot.title=element_text(size=12, hjust=0.55)) +
   scale_y_continuous(trans='log2')
 
@@ -845,8 +845,8 @@ mMAE
 ```
 
 ```{r}
-my_save = list(aRMSE = aRMSE, aQLIKE = aQLIKE, aMAE = aMAE, mRMSE = mRMSE, mQLIKE = mQLIKE, mMAE = mMAE)
-saveRDS(my_save,"my_save.rds")
+my_save1 = list(aRMSE = aRMSE, aQLIKE = aQLIKE, aMAE = aMAE, mRMSE = mRMSE, mQLIKE = mQLIKE, mMAE = mMAE)
+saveRDS(my_save1,"my_save1.rds")
 ```
 
 ```{r}
